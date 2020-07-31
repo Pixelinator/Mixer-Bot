@@ -1,18 +1,1246 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="utf-8">
+		<meta charset="utf-8" />
 		<title>Electron boilerplate</title>
-		<link rel="stylesheet" href="index.css">
+		<link rel="stylesheet" href="index.css" />
+		<link rel="stylesheet" href="mixer.css" />
+		<script defer type="module" src="main.js"></script>
 	</head>
 	<body>
-		<div class="container">
-			<header>
-				<h1>Electron boilerplate</h1>
-				<p></p>
-			</header>
-			<section class="main"></section>
-			<footer></footer>
+		<div id="app"></div>
+		<div id="complete-mixer-box">
+			<div id="mixer-gui-box">
+				<div id="html5-player">
+					<div id="channels" class="">
+						<div id="channels-left-border">
+							<div></div>
+						</div>
+						<div class="channel">
+							<!-- Input -->
+							<div class="channel-header">
+								<span class="channel-number">CH 1</span>
+								<div class="inputfile">
+									<span class="inputfile-name">Collecting glassess</span>
+								</div>
+							</div>
+
+							<div class="channel-body">
+								<!-- Inputfile -->
+								<div
+									class="buttonconsole inputfile-control"
+									style="margin-top: 0.125em;"
+								>
+									<button style="height: 1.75em;">Load</button>
+								</div>
+
+								<!-- Section Separator -->
+								<hr class="separator" />
+
+								<!-- Balance TODO: Balance Indicator -->
+								<div class="balance">
+									<div class="balance-mark"></div>
+
+									<div class="balance_control-bg">
+										<div
+											class="panningbutton button_knob balance_control active"
+											style="transform: rotate(132deg);"
+										>
+											<div></div>
+										</div>
+									</div>
+
+									<span class="balance-label balance-label-left">L</span>
+									<span class="balance-label balance-label-right">R</span>
+									<div class="balance-mark2"></div>
+									<div class="balance-mark3"></div>
+								</div>
+
+								<!-- Volume -->
+								<div class="volume">
+									<div class="volume_bg">
+										<hr />
+										<hr />
+										<hr />
+										<hr />
+										<hr />
+										<hr />
+										<hr />
+										<hr />
+										<hr />
+										<hr />
+										<hr />
+									</div>
+
+									<div
+										class="slider volume_control ui-slider ui-slider-vertical ui-widget ui-widget-content ui-corner-all"
+									>
+										<span
+											class="ui-slider-handle ui-state-default ui-corner-all"
+											tabindex="0"
+											style="bottom: 10%;"
+										></span>
+									</div>
+								</div>
+
+								<!-- Mute -->
+								<span class="buttonlabel">Mute</span>
+								<div class="buttonconsole mute_control">
+									<div class="button-indicator"></div>
+									<button></button>
+								</div>
+
+								<!-- Section Separator -->
+								<hr class="separator" />
+
+								<!-- Crossfade -->
+								<span class="buttonlabel">Crossfade</span>
+
+								<div class="buttonconsole crossfade_control">
+									<div class="button-indicator"></div>
+									<button></button>
+								</div>
+
+								<!-- Random -->
+								<span class="buttonlabel">Random</span>
+
+								<div class="buttonconsole random_control active">
+									<div class="button-indicator"></div>
+									<button></button>
+								</div>
+
+								<div class="randomsettings_control active">
+									<span>5x /10m</span>
+								</div>
+							</div>
+						</div>
+						<div class="channel">
+							<!-- Input -->
+							<div class="channel-header">
+								<span class="channel-number">CH 2</span>
+								<div class="inputfile">
+									<span class="inputfile-name">Cutlery</span>
+								</div>
+							</div>
+
+							<div class="channel-body">
+								<!-- Inputfile -->
+								<div
+									class="buttonconsole inputfile-control"
+									style="margin-top: 0.125em;"
+								>
+									<button style="height: 1.75em;">Load</button>
+								</div>
+
+								<!-- Section Separator -->
+								<hr class="separator" />
+
+								<!-- Balance TODO: Balance Indicator -->
+								<div class="balance">
+									<div class="balance-mark"></div>
+
+									<div class="balance_control-bg">
+										<div
+											class="panningbutton button_knob balance_control"
+											style="transform: rotate(0deg);"
+										>
+											<div></div>
+										</div>
+									</div>
+
+									<span class="balance-label balance-label-left">L</span>
+									<span class="balance-label balance-label-right">R</span>
+									<div class="balance-mark2"></div>
+									<div class="balance-mark3"></div>
+								</div>
+
+								<!-- Volume -->
+								<div class="volume">
+									<div class="volume_bg">
+										<hr />
+										<hr />
+										<hr />
+										<hr />
+										<hr />
+										<hr />
+										<hr />
+										<hr />
+										<hr />
+										<hr />
+										<hr />
+									</div>
+
+									<div
+										class="slider volume_control ui-slider ui-slider-vertical ui-widget ui-widget-content ui-corner-all"
+									>
+										<span
+											class="ui-slider-handle ui-state-default ui-corner-all"
+											tabindex="0"
+											style="bottom: 7%;"
+										></span>
+									</div>
+								</div>
+
+								<!-- Mute -->
+								<span class="buttonlabel">Mute</span>
+								<div class="buttonconsole mute_control">
+									<div class="button-indicator"></div>
+									<button></button>
+								</div>
+
+								<!-- Section Separator -->
+								<hr class="separator" />
+
+								<!-- Crossfade -->
+								<span class="buttonlabel">Crossfade</span>
+
+								<div class="buttonconsole crossfade_control">
+									<div class="button-indicator"></div>
+									<button></button>
+								</div>
+
+								<!-- Random -->
+								<span class="buttonlabel">Random</span>
+
+								<div class="buttonconsole random_control active">
+									<div class="button-indicator"></div>
+									<button></button>
+								</div>
+
+								<div class="randomsettings_control active">
+									<span>1x /1m</span>
+								</div>
+							</div>
+						</div>
+						<div class="channel">
+							<!-- Input -->
+							<div class="channel-header">
+								<span class="channel-number">CH 3</span>
+								<div class="inputfile">
+									<span class="inputfile-name">glass clink</span>
+								</div>
+							</div>
+
+							<div class="channel-body">
+								<!-- Inputfile -->
+								<div
+									class="buttonconsole inputfile-control"
+									style="margin-top: 0.125em;"
+								>
+									<button style="height: 1.75em;">Load</button>
+								</div>
+
+								<!-- Section Separator -->
+								<hr class="separator" />
+
+								<!-- Balance TODO: Balance Indicator -->
+								<div class="balance">
+									<div class="balance-mark"></div>
+
+									<div class="balance_control-bg">
+										<div
+											class="panningbutton button_knob balance_control active"
+											style="transform: rotate(-132deg);"
+										>
+											<div></div>
+										</div>
+									</div>
+
+									<span class="balance-label balance-label-left">L</span>
+									<span class="balance-label balance-label-right">R</span>
+									<div class="balance-mark2"></div>
+									<div class="balance-mark3"></div>
+								</div>
+
+								<!-- Volume -->
+								<div class="volume">
+									<div class="volume_bg">
+										<hr />
+										<hr />
+										<hr />
+										<hr />
+										<hr />
+										<hr />
+										<hr />
+										<hr />
+										<hr />
+										<hr />
+										<hr />
+									</div>
+
+									<div
+										class="slider volume_control ui-slider ui-slider-vertical ui-widget ui-widget-content ui-corner-all"
+									>
+										<span
+											class="ui-slider-handle ui-state-default ui-corner-all"
+											tabindex="0"
+											style="bottom: 1%;"
+										></span>
+									</div>
+								</div>
+
+								<!-- Mute -->
+								<span class="buttonlabel">Mute</span>
+								<div class="buttonconsole mute_control">
+									<div class="button-indicator"></div>
+									<button></button>
+								</div>
+
+								<!-- Section Separator -->
+								<hr class="separator" />
+
+								<!-- Crossfade -->
+								<span class="buttonlabel">Crossfade</span>
+
+								<div class="buttonconsole crossfade_control">
+									<div class="button-indicator"></div>
+									<button></button>
+								</div>
+
+								<!-- Random -->
+								<span class="buttonlabel">Random</span>
+
+								<div class="buttonconsole random_control active">
+									<div class="button-indicator"></div>
+									<button></button>
+								</div>
+
+								<div class="randomsettings_control active">
+									<span>1x /1m</span>
+								</div>
+							</div>
+						</div>
+						<div class="channel">
+							<!-- Input -->
+							<div class="channel-header">
+								<span class="channel-number">CH 4</span>
+								<div class="inputfile">
+									<span class="inputfile-name" style="left: 0px;"
+										>Wooden Door Slamming</span
+									>
+								</div>
+							</div>
+
+							<div class="channel-body">
+								<!-- Inputfile -->
+								<div
+									class="buttonconsole inputfile-control"
+									style="margin-top: 0.125em;"
+								>
+									<button style="height: 1.75em;">Load</button>
+								</div>
+
+								<!-- Section Separator -->
+								<hr class="separator" />
+
+								<!-- Balance TODO: Balance Indicator -->
+								<div class="balance">
+									<div class="balance-mark"></div>
+
+									<div class="balance_control-bg">
+										<div
+											class="panningbutton button_knob balance_control active"
+											style="transform: rotate(-26deg);"
+										>
+											<div></div>
+										</div>
+									</div>
+
+									<span class="balance-label balance-label-left">L</span>
+									<span class="balance-label balance-label-right">R</span>
+									<div class="balance-mark2"></div>
+									<div class="balance-mark3"></div>
+								</div>
+
+								<!-- Volume -->
+								<div class="volume">
+									<div class="volume_bg">
+										<hr />
+										<hr />
+										<hr />
+										<hr />
+										<hr />
+										<hr />
+										<hr />
+										<hr />
+										<hr />
+										<hr />
+										<hr />
+									</div>
+
+									<div
+										class="slider volume_control ui-slider ui-slider-vertical ui-widget ui-widget-content ui-corner-all"
+									>
+										<span
+											class="ui-slider-handle ui-state-default ui-corner-all"
+											tabindex="0"
+											style="bottom: 13%;"
+										></span>
+									</div>
+								</div>
+
+								<!-- Mute -->
+								<span class="buttonlabel">Mute</span>
+								<div class="buttonconsole mute_control">
+									<div class="button-indicator"></div>
+									<button></button>
+								</div>
+
+								<!-- Section Separator -->
+								<hr class="separator" />
+
+								<!-- Crossfade -->
+								<span class="buttonlabel">Crossfade</span>
+
+								<div class="buttonconsole crossfade_control">
+									<div class="button-indicator"></div>
+									<button></button>
+								</div>
+
+								<!-- Random -->
+								<span class="buttonlabel">Random</span>
+
+								<div class="buttonconsole random_control active">
+									<div class="button-indicator"></div>
+									<button></button>
+								</div>
+
+								<div class="randomsettings_control active">
+									<span>1x /1m</span>
+								</div>
+							</div>
+						</div>
+						<div class="channel">
+							<!-- Input -->
+							<div class="channel-header">
+								<span class="channel-number">CH 5</span>
+								<div class="inputfile">
+									<span class="inputfile-name">fireplace</span>
+								</div>
+							</div>
+
+							<div class="channel-body">
+								<!-- Inputfile -->
+								<div
+									class="buttonconsole inputfile-control"
+									style="margin-top: 0.125em;"
+								>
+									<button style="height: 1.75em;">Load</button>
+								</div>
+
+								<!-- Section Separator -->
+								<hr class="separator" />
+
+								<!-- Balance TODO: Balance Indicator -->
+								<div class="balance">
+									<div class="balance-mark"></div>
+
+									<div class="balance_control-bg">
+										<div
+											class="panningbutton button_knob balance_control"
+											style="transform: rotate(0deg);"
+										>
+											<div></div>
+										</div>
+									</div>
+
+									<span class="balance-label balance-label-left">L</span>
+									<span class="balance-label balance-label-right">R</span>
+									<div class="balance-mark2"></div>
+									<div class="balance-mark3"></div>
+								</div>
+
+								<!-- Volume -->
+								<div class="volume">
+									<div class="volume_bg">
+										<hr />
+										<hr />
+										<hr />
+										<hr />
+										<hr />
+										<hr />
+										<hr />
+										<hr />
+										<hr />
+										<hr />
+										<hr />
+									</div>
+
+									<div
+										class="slider volume_control ui-slider ui-slider-vertical ui-widget ui-widget-content ui-corner-all"
+									>
+										<span
+											class="ui-slider-handle ui-state-default ui-corner-all"
+											tabindex="0"
+											style="bottom: 35%;"
+										></span>
+									</div>
+								</div>
+
+								<!-- Mute -->
+								<span class="buttonlabel">Mute</span>
+								<div class="buttonconsole mute_control">
+									<div class="button-indicator"></div>
+									<button></button>
+								</div>
+
+								<!-- Section Separator -->
+								<hr class="separator" />
+
+								<!-- Crossfade -->
+								<span class="buttonlabel">Crossfade</span>
+
+								<div class="buttonconsole crossfade_control">
+									<div class="button-indicator"></div>
+									<button></button>
+								</div>
+
+								<!-- Random -->
+								<span class="buttonlabel">Random</span>
+
+								<div class="buttonconsole random_control">
+									<div class="button-indicator"></div>
+									<button></button>
+								</div>
+
+								<div class="randomsettings_control">
+									<span>5x /1h</span>
+								</div>
+							</div>
+						</div>
+						<div class="channel">
+							<!-- Input -->
+							<div class="channel-header">
+								<span class="channel-number">CH 6</span>
+								<div class="inputfile">
+									<span class="inputfile-name" style="left: -16.6914px;"
+										>Pouring water into glass</span
+									>
+								</div>
+							</div>
+
+							<div class="channel-body">
+								<!-- Inputfile -->
+								<div
+									class="buttonconsole inputfile-control"
+									style="margin-top: 0.125em;"
+								>
+									<button style="height: 1.75em;">Load</button>
+								</div>
+
+								<!-- Section Separator -->
+								<hr class="separator" />
+
+								<!-- Balance TODO: Balance Indicator -->
+								<div class="balance">
+									<div class="balance-mark"></div>
+
+									<div class="balance_control-bg">
+										<div
+											class="panningbutton button_knob balance_control"
+											style="transform: rotate(0deg);"
+										>
+											<div></div>
+										</div>
+									</div>
+
+									<span class="balance-label balance-label-left">L</span>
+									<span class="balance-label balance-label-right">R</span>
+									<div class="balance-mark2"></div>
+									<div class="balance-mark3"></div>
+								</div>
+
+								<!-- Volume -->
+								<div class="volume">
+									<div class="volume_bg">
+										<hr />
+										<hr />
+										<hr />
+										<hr />
+										<hr />
+										<hr />
+										<hr />
+										<hr />
+										<hr />
+										<hr />
+										<hr />
+									</div>
+
+									<div
+										class="slider volume_control ui-slider ui-slider-vertical ui-widget ui-widget-content ui-corner-all"
+									>
+										<span
+											class="ui-slider-handle ui-state-default ui-corner-all"
+											tabindex="0"
+											style="bottom: 69%;"
+										></span>
+									</div>
+								</div>
+
+								<!-- Mute -->
+								<span class="buttonlabel">Mute</span>
+								<div class="buttonconsole mute_control">
+									<div class="button-indicator"></div>
+									<button></button>
+								</div>
+
+								<!-- Section Separator -->
+								<hr class="separator" />
+
+								<!-- Crossfade -->
+								<span class="buttonlabel">Crossfade</span>
+
+								<div class="buttonconsole crossfade_control">
+									<div class="button-indicator"></div>
+									<button></button>
+								</div>
+
+								<!-- Random -->
+								<span class="buttonlabel">Random</span>
+
+								<div class="buttonconsole random_control active">
+									<div class="button-indicator"></div>
+									<button></button>
+								</div>
+
+								<div class="randomsettings_control active">
+									<span>10x /10m</span>
+								</div>
+							</div>
+						</div>
+						<div class="channel">
+							<!-- Input -->
+							<div class="channel-header">
+								<span class="channel-number">CH 7</span>
+								<div class="inputfile">
+									<span class="inputfile-name" style="left: 0px;"
+										>Lute - Greensleeves</span
+									>
+								</div>
+							</div>
+
+							<div class="channel-body">
+								<!-- Inputfile -->
+								<div
+									class="buttonconsole inputfile-control"
+									style="margin-top: 0.125em;"
+								>
+									<button style="height: 1.75em;">Load</button>
+								</div>
+
+								<!-- Section Separator -->
+								<hr class="separator" />
+
+								<!-- Balance TODO: Balance Indicator -->
+								<div class="balance">
+									<div class="balance-mark"></div>
+
+									<div class="balance_control-bg">
+										<div
+											class="panningbutton button_knob balance_control"
+											style="transform: rotate(0deg);"
+										>
+											<div></div>
+										</div>
+									</div>
+
+									<span class="balance-label balance-label-left">L</span>
+									<span class="balance-label balance-label-right">R</span>
+									<div class="balance-mark2"></div>
+									<div class="balance-mark3"></div>
+								</div>
+
+								<!-- Volume -->
+								<div class="volume">
+									<div class="volume_bg">
+										<hr />
+										<hr />
+										<hr />
+										<hr />
+										<hr />
+										<hr />
+										<hr />
+										<hr />
+										<hr />
+										<hr />
+										<hr />
+									</div>
+
+									<div
+										class="slider volume_control ui-slider ui-slider-vertical ui-widget ui-widget-content ui-corner-all"
+									>
+										<span
+											class="ui-slider-handle ui-state-default ui-corner-all"
+											tabindex="0"
+											style="bottom: 13%;"
+										></span>
+									</div>
+								</div>
+
+								<!-- Mute -->
+								<span class="buttonlabel">Mute</span>
+								<div class="buttonconsole mute_control">
+									<div class="button-indicator"></div>
+									<button></button>
+								</div>
+
+								<!-- Section Separator -->
+								<hr class="separator" />
+
+								<!-- Crossfade -->
+								<span class="buttonlabel">Crossfade</span>
+
+								<div class="buttonconsole crossfade_control">
+									<div class="button-indicator"></div>
+									<button></button>
+								</div>
+
+								<!-- Random -->
+								<span class="buttonlabel">Random</span>
+
+								<div class="buttonconsole random_control">
+									<div class="button-indicator"></div>
+									<button></button>
+								</div>
+
+								<div class="randomsettings_control">
+									<span>4x /1h</span>
+								</div>
+							</div>
+						</div>
+						<div class="channel">
+							<!-- Input -->
+							<div class="channel-header">
+								<span class="channel-number">CH 8</span>
+								<div class="inputfile">
+									<span class="inputfile-name" style="left: 0px;"
+										>Quiet British Pub</span
+									>
+								</div>
+							</div>
+
+							<div class="channel-body">
+								<!-- Inputfile -->
+								<div
+									class="buttonconsole inputfile-control"
+									style="margin-top: 0.125em;"
+								>
+									<button style="height: 1.75em;">Load</button>
+								</div>
+
+								<!-- Section Separator -->
+								<hr class="separator" />
+
+								<!-- Balance TODO: Balance Indicator -->
+								<div class="balance">
+									<div class="balance-mark"></div>
+
+									<div class="balance_control-bg">
+										<div
+											class="panningbutton button_knob balance_control"
+											style="transform: rotate(0deg);"
+										>
+											<div></div>
+										</div>
+									</div>
+
+									<span class="balance-label balance-label-left">L</span>
+									<span class="balance-label balance-label-right">R</span>
+									<div class="balance-mark2"></div>
+									<div class="balance-mark3"></div>
+								</div>
+
+								<!-- Volume -->
+								<div class="volume">
+									<div class="volume_bg">
+										<hr />
+										<hr />
+										<hr />
+										<hr />
+										<hr />
+										<hr />
+										<hr />
+										<hr />
+										<hr />
+										<hr />
+										<hr />
+									</div>
+
+									<div
+										class="slider volume_control ui-slider ui-slider-vertical ui-widget ui-widget-content ui-corner-all"
+									>
+										<span
+											class="ui-slider-handle ui-state-default ui-corner-all"
+											tabindex="0"
+											style="bottom: 21%;"
+										></span>
+									</div>
+								</div>
+
+								<!-- Mute -->
+								<span class="buttonlabel">Mute</span>
+								<div class="buttonconsole mute_control">
+									<div class="button-indicator"></div>
+									<button></button>
+								</div>
+
+								<!-- Section Separator -->
+								<hr class="separator" />
+
+								<!-- Crossfade -->
+								<span class="buttonlabel">Crossfade</span>
+
+								<div class="buttonconsole crossfade_control">
+									<div class="button-indicator"></div>
+									<button></button>
+								</div>
+
+								<!-- Random -->
+								<span class="buttonlabel">Random</span>
+
+								<div class="buttonconsole random_control">
+									<div class="button-indicator"></div>
+									<button></button>
+								</div>
+
+								<div class="randomsettings_control">
+									<span>5x /1h</span>
+								</div>
+							</div>
+						</div>
+						<div id="masterchannel" class="masterchannel">
+							<div class="masterchannel-bg">
+								<div class="masterchannel-bg-inner">
+									<div class="volume mastervolume">
+										<div class="volume_bg" style="left: 21px !important;">
+											<hr />
+											<hr />
+											<hr />
+											<hr />
+											<hr />
+											<hr />
+											<hr />
+											<hr />
+											<hr />
+											<hr />
+											<hr />
+										</div>
+										<div
+											class="slider mastercontrol_volume ui-slider ui-slider-vertical ui-widget ui-widget-content ui-corner-all"
+											style="margin-top: 1.5em;"
+										>
+											<span
+												class="ui-slider-handle ui-state-default ui-corner-all"
+												tabindex="0"
+												style="bottom: 100%;"
+											></span>
+										</div>
+									</div>
+
+									<div
+										class="buttonconsole"
+										style="margin-top: 0.5em; width: 2.75em; height: 2.5em;"
+									>
+										<button
+											class="mastercontrol_mute active"
+											style="height: 100%;"
+										></button>
+									</div>
+
+									<div
+										class="buttonconsole mixer-minimize-control"
+										style="
+											margin-top: 1.125em;
+											width: 55px;
+											line-height: normal;
+										"
+									>
+										<button style="height: 38px;">Load Preset</button>
+									</div>
+								</div>
+
+								<div
+									class="buttonconsole mixer-save-control"
+									style="
+										position: relative;
+										top: -0.75em;
+										width: 55px;
+										line-height: normal;
+									"
+								>
+									<button style="height: 38px;">Stream Output</button>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div
+						class="overlay"
+						style="
+							z-index: 99;
+							position: absolute;
+							left: 0;
+							top: 0;
+							width: 100%;
+							height: 100%;
+							background-color: rgba(40, 40, 40, 0.5);
+							display: none;
+						"
+					></div>
+
+					<!-- Randomsettings Menu -->
+					<div class="randomsettingsmenu">
+						<div class="randomsettingsmenu-editor">
+							<div class="randomsettingsmenu-focusdiv">
+								<ul class="randomsettingsmenu-countlist"></ul>
+								<span>x /</span>
+								<ul class="randomsettingsmenu-unitlist">
+									<li>1h</li>
+									<li>10m</li>
+									<li>1m</li>
+								</ul>
+							</div>
+						</div>
+						<div class="buttonconsole">
+							<button data-action="save">Ok</button>
+							<div class="buttonspacer"></div>
+							<button data-action="cancel">Cancel</button>
+						</div>
+					</div>
+
+					<!-- Inputfile Browser -->
+					<div class="inputfileBrowser_layer" style="padding-top: 0.5em;">
+						<span
+							class="inputfilebrowser-headline"
+							style="display: inline-block; margin-left: 0.75em;"
+						></span>
+
+						<div
+							class="inputfileBrowser jstree jstree-1 jstree-default"
+							style="margin-top: 0.75em;"
+							role="tree"
+							aria-multiselectable="true"
+							tabindex="0"
+							aria-activedescendant="82"
+							aria-busy="false"
+						>
+							<ul
+								class="jstree-container-ul jstree-children jstree-wholerow-ul jstree-no-dots"
+								role="group"
+							>
+								<li
+									role="treeitem"
+									aria-selected="false"
+									aria-level="1"
+									aria-labelledby="82_anchor"
+									aria-expanded="false"
+									id="82"
+									class="jstree-node jstree-closed"
+								>
+									<div
+										unselectable="on"
+										role="presentation"
+										class="jstree-wholerow"
+									>
+										&nbsp;
+									</div>
+									<i class="jstree-icon jstree-ocl" role="presentation"></i
+									><a
+										class="jstree-anchor"
+										href="#"
+										tabindex="-1"
+										id="82_anchor"
+										><i
+											class="jstree-icon jstree-themeicon"
+											role="presentation"
+										></i
+										>Effects</a
+									>
+								</li>
+								<li
+									role="treeitem"
+									aria-selected="false"
+									aria-level="1"
+									aria-labelledby="34_anchor"
+									aria-expanded="false"
+									id="34"
+									class="jstree-node jstree-closed"
+								>
+									<div
+										unselectable="on"
+										role="presentation"
+										class="jstree-wholerow"
+									>
+										&nbsp;
+									</div>
+									<i class="jstree-icon jstree-ocl" role="presentation"></i
+									><a
+										class="jstree-anchor"
+										href="#"
+										tabindex="-1"
+										id="34_anchor"
+										><i
+											class="jstree-icon jstree-themeicon"
+											role="presentation"
+										></i
+										>Exteriors</a
+									>
+								</li>
+								<li
+									role="treeitem"
+									aria-selected="false"
+									aria-level="1"
+									aria-labelledby="3_anchor"
+									aria-expanded="false"
+									id="3"
+									class="jstree-node jstree-closed"
+								>
+									<div
+										unselectable="on"
+										role="presentation"
+										class="jstree-wholerow"
+									>
+										&nbsp;
+									</div>
+									<i class="jstree-icon jstree-ocl" role="presentation"></i
+									><a class="jstree-anchor" href="#" tabindex="-1" id="3_anchor"
+										><i
+											class="jstree-icon jstree-themeicon"
+											role="presentation"
+										></i
+										>Human</a
+									>
+								</li>
+								<li
+									role="treeitem"
+									aria-selected="false"
+									aria-level="1"
+									aria-labelledby="18_anchor"
+									aria-expanded="false"
+									id="18"
+									class="jstree-node jstree-closed"
+								>
+									<div
+										unselectable="on"
+										role="presentation"
+										class="jstree-wholerow"
+									>
+										&nbsp;
+									</div>
+									<i class="jstree-icon jstree-ocl" role="presentation"></i
+									><a
+										class="jstree-anchor"
+										href="#"
+										tabindex="-1"
+										id="18_anchor"
+										><i
+											class="jstree-icon jstree-themeicon"
+											role="presentation"
+										></i
+										>Industry and Machines</a
+									>
+								</li>
+								<li
+									role="treeitem"
+									aria-selected="false"
+									aria-level="1"
+									aria-labelledby="35_anchor"
+									aria-expanded="false"
+									id="35"
+									class="jstree-node jstree-closed"
+								>
+									<div
+										unselectable="on"
+										role="presentation"
+										class="jstree-wholerow"
+									>
+										&nbsp;
+									</div>
+									<i class="jstree-icon jstree-ocl" role="presentation"></i
+									><a
+										class="jstree-anchor"
+										href="#"
+										tabindex="-1"
+										id="35_anchor"
+										><i
+											class="jstree-icon jstree-themeicon"
+											role="presentation"
+										></i
+										>Interiors</a
+									>
+								</li>
+								<li
+									role="treeitem"
+									aria-selected="false"
+									aria-level="1"
+									aria-labelledby="17_anchor"
+									aria-expanded="false"
+									id="17"
+									class="jstree-node jstree-closed"
+								>
+									<div
+										unselectable="on"
+										role="presentation"
+										class="jstree-wholerow"
+									>
+										&nbsp;
+									</div>
+									<i class="jstree-icon jstree-ocl" role="presentation"></i
+									><a
+										class="jstree-anchor"
+										href="#"
+										tabindex="-1"
+										id="17_anchor"
+										><i
+											class="jstree-icon jstree-themeicon"
+											role="presentation"
+										></i
+										>Music</a
+									>
+								</li>
+								<li
+									role="treeitem"
+									aria-selected="false"
+									aria-level="1"
+									aria-labelledby="2_anchor"
+									aria-expanded="false"
+									id="2"
+									class="jstree-node jstree-closed"
+								>
+									<div
+										unselectable="on"
+										role="presentation"
+										class="jstree-wholerow"
+									>
+										&nbsp;
+									</div>
+									<i class="jstree-icon jstree-ocl" role="presentation"></i
+									><a class="jstree-anchor" href="#" tabindex="-1" id="2_anchor"
+										><i
+											class="jstree-icon jstree-themeicon"
+											role="presentation"
+										></i
+										>Nature</a
+									>
+								</li>
+								<li
+									role="treeitem"
+									aria-selected="false"
+									aria-level="1"
+									aria-labelledby="36_anchor"
+									aria-expanded="false"
+									id="36"
+									class="jstree-node jstree-closed"
+								>
+									<div
+										unselectable="on"
+										role="presentation"
+										class="jstree-wholerow"
+									>
+										&nbsp;
+									</div>
+									<i class="jstree-icon jstree-ocl" role="presentation"></i
+									><a
+										class="jstree-anchor"
+										href="#"
+										tabindex="-1"
+										id="36_anchor"
+										><i
+											class="jstree-icon jstree-themeicon"
+											role="presentation"
+										></i
+										>Transport</a
+									>
+								</li>
+								<li
+									role="treeitem"
+									aria-selected="false"
+									aria-level="1"
+									aria-labelledby="37_anchor"
+									aria-expanded="false"
+									id="37"
+									class="jstree-node jstree-closed jstree-last"
+								>
+									<div
+										unselectable="on"
+										role="presentation"
+										class="jstree-wholerow"
+									>
+										&nbsp;
+									</div>
+									<i class="jstree-icon jstree-ocl" role="presentation"></i
+									><a
+										class="jstree-anchor"
+										href="#"
+										tabindex="-1"
+										id="37_anchor"
+										><i
+											class="jstree-icon jstree-themeicon"
+											role="presentation"
+										></i
+										>Unreal Ambiances</a
+									>
+								</li>
+							</ul>
+						</div>
+
+						<div
+							class="inputfiles-previewcontainer"
+							style="width: 100%; margin-bottom: 0.5em;"
+						>
+							<div
+								class=""
+								style="
+									margin-left: 0.75em;
+									cursor: pointer;
+									display: inline-block;
+								"
+							>
+								<span style="font-size: 0.6875em; line-height: 1.5em;"
+									>New sound</span
+								>
+								<div class="inputfilebrowser-inputfile inputfile_new">
+									<button class="previewbutton"></button>
+									<div>
+										<span></span>
+									</div>
+								</div>
+							</div>
+
+							<div
+								class=""
+								style="
+									margin-left: 0.75em;
+									cursor: pointer;
+									display: inline-block;
+								"
+							>
+								<span style="font-size: 0.6875em; line-height: 1.5em;"
+									>Current sound</span
+								>
+								<div class="inputfilebrowser-inputfile inputfile_current">
+									<button class="previewbutton"></button>
+									<div>
+										<span></span>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="buttonconsole" style="margin-left: 0.75em;">
+							<button class="submit">Ok</button>
+						</div>
+
+						<div class="buttonconsole">
+							<button class="cancel">Cancel</button>
+						</div>
+
+						<div class="buttonconsole" style="width: 5em; margin-left: 5.5em;">
+							<button class="reset">Reset Channel</button>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</body>
 </html>
