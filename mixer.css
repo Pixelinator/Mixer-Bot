@@ -270,8 +270,7 @@ input {
 .ui-widget-content .ui-state-default,
 .ui-widget-header .ui-state-default {
 	border: 1px solid rgb(211, 211, 211);
-	background: url("images/ui-bg_glass_75_e6e6e6_1x400.png") 50% 50% repeat-x
-		rgb(230, 230, 230);
+	background: rgb(230, 230, 230);
 	font-weight: 400;
 	color: rgb(85, 85, 85);
 }
@@ -640,8 +639,6 @@ input {
 .ui-widget-content .ui-state-default,
 .ui-widget-header .ui-state-default {
 	border: 1px solid rgb(211, 211, 211);
-	background: url("images/ui-bg_glass_75_e6e6e6_1x400.png") 50% 50% repeat-x
-		rgb(230, 230, 230);
 	font-weight: 400;
 	color: rgb(85, 85, 85);
 }
@@ -696,6 +693,16 @@ input {
 	background-image: url("./static/crossfade.png") !important;
 }
 
+.crossfade_control.active > .button-indicator {
+	background-color: rgb(12, 218, 1);
+	box-shadow: rgba(0, 0, 0, 0.2) 0px -1px 7px 1px,
+		rgb(19, 110, 0) 0px -1px 9px inset, rgb(137, 255, 0) 0px 2px 12px;
+}
+
+.crossfade_control.active > button {
+	box-shadow: rgba(29, 32, 31, 0.25) 0px 1px 2px 1px inset;
+}
+
 .buttonconsole.active > .button-indicator {
 	background-color: rgb(12, 218, 1);
 	box-shadow: rgba(0, 0, 0, 0.2) 0px -1px 7px 1px,
@@ -704,6 +711,16 @@ input {
 
 .buttonconsole.active > button {
 	box-shadow: rgba(29, 32, 31, 0.25) 0px 1px 2px 1px inset;
+}
+
+.mute_control.active > .button-indicator {
+	background-color: rgb(218, 12, 1);
+	box-shadow: rgba(0, 0, 0, 0.2) 0px -1px 7px 1px,
+		rgb(110, 19, 0) 0px -1px 9px inset, rgb(255, 137, 0) 0px 2px 12px;
+}
+
+.mute_control.active > button {
+	box-shadow: rgba(32, 29, 31, 0.25) 0px 1px 2px 1px inset;
 }
 
 .random_control > button {
@@ -744,7 +761,6 @@ input {
 	padding: 0px;
 	margin: 10px 0px 0px 10px;
 	position: relative;
-	background-image: url("/images_template/4/2/2/4224cda71163ca71ce7941c169389177_flash.jpg");
 }
 
 #mixer-gui-box {
@@ -990,168 +1006,6 @@ ul {
 	height: 2px;
 }
 
-.inputfileBrowser_layer {
-	position: absolute;
-	z-index: 9999;
-	top: 1.5em;
-	left: 10.5em;
-	display: none;
-	overflow: hidden;
-	width: 18.5em;
-	height: 24em;
-	border-radius: 5px;
-	background-color: rgba(29, 29, 29, 0.95);
-}
-
-.inputfileBrowser_layer span {
-	color: rgb(255, 255, 255);
-	font-family: "cabin condensed", sans-serif;
-	font-size: 0.75em;
-}
-
-.inputfileBrowser {
-	overflow: auto;
-	width: auto;
-	height: 19em;
-	color: rgb(255, 255, 255);
-	font-family: "cabin condensed", sans-serif;
-	font-size: 0.75em;
-	background-color: rgba(20, 20, 20, 0.95);
-	border-radius: 5px;
-	padding-top: 0.25em;
-	padding-bottom: 1em;
-	margin-bottom: 0.75em;
-}
-
-.jstree-node,
-.jstree-children,
-.jstree-container-ul {
-	display: block;
-	margin: 0px;
-	padding: 0px;
-	list-style-type: none;
-	list-style-image: none;
-}
-
-.jstree-wholerow-ul {
-	position: relative;
-	display: inline-block;
-	min-width: 100%;
-}
-
-.jstree-node {
-	white-space: nowrap;
-}
-
-.jstree-default .jstree-node,
-.jstree-default .jstree-icon {
-	background-repeat: no-repeat;
-	background-color: transparent;
-}
-
-.jstree-default .jstree-node {
-	min-height: 24px;
-	line-height: 24px;
-	margin-left: 24px;
-	min-width: 24px;
-}
-
-.jstree-default .jstree-node,
-.jstree-default .jstree-icon {
-	background-image: url("32px.png");
-}
-
-.jstree-default .jstree-node {
-	background-position: -292px -4px;
-	background-repeat: repeat-y;
-}
-
-.jstree-default > .jstree-no-dots .jstree-node,
-.jstree-default > .jstree-no-dots .jstree-leaf > .jstree-ocl {
-	background: 0px 0px;
-}
-
-.jstree-default > .jstree-container-ul > .jstree-node {
-	margin-left: 0px;
-	margin-right: 0px;
-}
-
-.jstree-default .jstree-node.jstree-closed {
-}
-
-.jstree-wholerow-ul .jstree-wholerow {
-	width: 100%;
-	cursor: pointer;
-	position: absolute;
-	left: 0px;
-	user-select: none;
-}
-
-.jstree-default .jstree-anchor,
-.jstree-default .jstree-wholerow {
-	transition: background-color 0.15s ease 0s, box-shadow 0.15s ease 0s;
-}
-
-.jstree-default .jstree-wholerow {
-	box-sizing: border-box;
-}
-
-.jstree-default .jstree-wholerow {
-	height: 24px;
-}
-
-.jstree-icon {
-	display: inline-block;
-	text-decoration: none;
-	margin: 0px;
-	padding: 0px;
-	vertical-align: top;
-	text-align: center;
-}
-
-.jstree-icon:empty {
-	display: inline-block;
-	text-decoration: none;
-	margin: 0px;
-	padding: 0px;
-	vertical-align: top;
-	text-align: center;
-}
-
-.jstree-ocl {
-	cursor: pointer;
-}
-
-.jstree-wholerow-ul .jstree-anchor,
-.jstree-wholerow-ul .jstree-icon {
-	position: relative;
-}
-
-.jstree-default .jstree-icon {
-	width: 24px;
-	height: 24px;
-	line-height: 24px;
-}
-
-.jstree-default .jstree-icon:empty {
-	width: 24px;
-	height: 24px;
-	line-height: 24px;
-}
-
-.jstree-default .jstree-closed > .jstree-ocl {
-	background-position: -100px -4px;
-}
-
-.jstree-default > .jstree-no-dots .jstree-closed > .jstree-ocl {
-	background-position: -4px -4px;
-}
-
-.jstree-default i.jstree-icon.jstree-ocl {
-	width: 16px;
-	height: 24px;
-}
-
 a:active {
 	outline: none;
 }
@@ -1166,111 +1020,4 @@ a {
 
 a:hover {
 	text-decoration: underline;
-}
-
-.jstree-anchor {
-	display: inline-block;
-	color: rgb(0, 0, 0);
-	white-space: nowrap;
-	padding: 0px 4px 0px 1px;
-	margin: 0px;
-	vertical-align: top;
-}
-
-.jstree-anchor:focus {
-	outline: 0px;
-}
-
-.jstree-anchor,
-.jstree-anchor:link,
-.jstree-anchor:visited,
-.jstree-anchor:hover,
-.jstree-anchor:active {
-	text-decoration: none;
-	color: inherit;
-}
-
-.jstree-default .jstree-anchor {
-	line-height: 24px;
-	height: 24px;
-}
-
-.jstree-anchor > .jstree-themeicon {
-	margin-right: 2px;
-}
-
-.jstree-default .jstree-themeicon {
-	background-position: -260px -4px;
-}
-
-.jstree-default .jstree-last {
-	background: 0px 0px;
-}
-
-.inputfiles-previewcontainer {
-	position: relative;
-	left: -9em;
-	transition: left 500ms ease 0s;
-}
-
-.inputfile_new {
-	background-color: rgb(24, 82, 110);
-	padding: 0.125em;
-	width: 8em;
-	height: 1.625em;
-	border-radius: 5px;
-	text-align: left;
-	overflow: hidden;
-}
-
-.previewbutton {
-	background-size: 60%;
-	background-repeat: no-repeat;
-	background-position: center center;
-	background-image: url("./static/play.png") !important;
-	transition: none 0s ease 0s !important;
-}
-
-.inputfileBrowser_layer button.previewbutton {
-	width: 1.75em;
-	height: 1.75em;
-	border-radius: 4px;
-	background-color: rgb(56, 62, 60);
-	color: rgb(224, 224, 224);
-	border: 1px solid rgb(46, 51, 49);
-	outline: none;
-	font-family: "cabin condensed", sans-serif;
-	font-size: 0.75em;
-	cursor: pointer;
-}
-
-.inputfilebrowser-inputfile > div {
-	display: inline-block;
-	height: 100%;
-	width: 6em;
-	overflow: hidden;
-	vertical-align: top;
-}
-
-.inputfilebrowser-inputfile span {
-	display: inline-block;
-	line-height: 1.75em;
-	height: 100%;
-	position: relative;
-	cursor: pointer !important;
-}
-
-.inputfile_current {
-	padding: 0.125em;
-	background-color: rgb(40, 40, 40);
-	width: 8em;
-	height: 1.625em;
-	border-radius: 5px;
-	text-align: left;
-	overflow: hidden;
-}
-
-.inputfileBrowser_layer button.submit {
-	opacity: 0.2;
-	cursor: default;
 }
